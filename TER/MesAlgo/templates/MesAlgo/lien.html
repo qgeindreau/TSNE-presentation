@@ -1,13 +1,11 @@
 {% extends 'MesAlgo/base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 <div id="plot">
-<h1>{{test|safe}}</h1>
+   <h1>{{test|safe}}</h1>
 </div>
 <form action= "{% url 'MesAlgo:lien' %}#plot" method="post" enctype="multipart/form-data" id="v-form">
-    {% csrf_token %}
-    {{form|crispy }}
-    <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
+   {% csrf_token %}
+   {{form|crispy }}
+   <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
 </form>
-
-
 {% endblock %}

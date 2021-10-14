@@ -1,124 +1,113 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% load static %}
-
-    <link rel="stylesheet" type="text/css" href="{% static 'MesAlgo/css/bootstrap.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'MesAlgo/css/business-casual.css' %}" />
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-
-    <div class="brand"><a href="/">DATA VISUALIZATION</a></div>
-    <div class="address-bar">T-Distributed Stochastic Neighbor Embedding</div>
-    <div class="address-bar">Enseignant: Rousseau David </div>    
-    <div class="address-bar">Etudiants: Goblet Simon Geindreau Quentin</div>
-    <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      {% load static %}
+      <link rel="stylesheet" type="text/css" href="{% static 'MesAlgo/css/bootstrap.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'MesAlgo/css/business-casual.css' %}" />
+      <!-- Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <div class="brand"><a href="/">DATA VISUALIZATION</a></div>
+      <div class="address-bar">T-Distributed Stochastic Neighbor Embedding</div>
+      <div class="address-bar">Enseignant: Rousseau David </div>
+      <div class="address-bar">Etudiants: Goblet Simon Geindreau Quentin</div>
+      <!-- Navigation -->
+      <nav class="navbar navbar-default" role="navigation">
+         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Menu</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">TSNE</a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Menu</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+               <a class="navbar-brand" href="index.html">TSNE</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <h3><a href="{% url 'MesAlgo:index' %}" style="color:rgb(61, 47, 189);">Diaporama </a> <a href="{% url 'MesAlgo:prepro' %}" style="color:rgba(180, 176, 109, 0.527);">Pré-processing</a> <a href="{% url 'MesAlgo:clustering' %}" style="color:rgb(61, 47, 189);">ACP|TSNE </a> <a href="{% url 'MesAlgo:lien' %}" style="color:rgba(180, 176, 109, 0.527);">MANIPULATION </a><a href="{% url 'MesAlgo:meo' %}" style="color:rgba(61, 47, 189);">BIBLIOGRAPHIE</a></h3>
-                    </li>
-                </ul>
+               <ul class="nav navbar-nav">
+                  <li>
+                     <h3><a href="{% url 'MesAlgo:index' %}" style="color:rgb(61, 47, 189);">Diaporama </a> <a href="{% url 'MesAlgo:prepro' %}" style="color:rgba(180, 176, 109, 0.527);">Pré-processing</a> <a href="{% url 'MesAlgo:clustering' %}" style="color:rgb(61, 47, 189);">ACP|TSNE </a> <a href="{% url 'MesAlgo:lien' %}" style="color:rgba(180, 176, 109, 0.527);">MANIPULATION </a><a href="{% url 'MesAlgo:meo' %}" style="color:rgba(61, 47, 189);">BIBLIOGRAPHIE</a></h3>
+                  </li>
+               </ul>
             </div>
             <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-
-    <div class="container-sm">
+         </div>
+         <!-- /.container -->
+      </nav>
+      <div class="container-sm">
       <div class="row">
-        <div class="box">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Example of Bootstrap 3 Carousel</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<style type="text/css">
-</style>
-</head>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-<!-- Indicators -->
-<ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-    <li data-target="#myCarousel" data-slide-to="4"></li>
-    <li data-target="#myCarousel" data-slide-to="5"></li>
-</ol>
-
-<!-- Wrapper for slides -->
-<div class="carousel-inner" role="listbox">
-    {% for p in articles %}
-    {% if forloop.counter == 1 %}
-    <div class="item active">
-    {% else %}
-    <div class="item">
-    {% endif %}
-        <img src="{{ p.image.url }}" alt="Image" width="1500" height="1000">
-    </div>
-    {% endfor %}
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="chevron-left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    </a>
-</div>
-</html>
-</div>
-</div>
-</div>
-
-
-<footer>
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12 text-center">
-          </div>
+         <div class="box">
+            <!DOCTYPE html>
+            <html lang="en">
+               <head>
+                  <meta charset="UTF-8">
+                  <title>Example of Bootstrap 3 Carousel</title>
+                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+                  <style type="text/css"></style>
+               </head>
+               <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                     <li data-target="#myCarousel" data-slide-to="1"></li>
+                     <li data-target="#myCarousel" data-slide-to="2"></li>
+                     <li data-target="#myCarousel" data-slide-to="3"></li>
+                     <li data-target="#myCarousel" data-slide-to="4"></li>
+                     <li data-target="#myCarousel" data-slide-to="5"></li>
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                     {% for p in articles %}
+                     {% if forloop.counter == 1 %}
+                     <div class="item active">
+                        {% else %}
+                        <div class="item">
+                           {% endif %}
+                           <img src="{{ p.image.url }}" alt="Image" width="1500" height="1000">
+                        </div>
+                        {% endfor %}
+                     </div>
+                     <!-- Left and right controls -->
+                     <a class="chevron-left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                     </a>
+                     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                     </a>
+                  </div>
+            </html>
+            </div>
+         </div>
       </div>
-  </div>
-</footer>
-
-<!-- jQuery -->
-<script src="{% static 'MesAlgo/js/jquery.js' %}"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="{% static 'MesAlgo/js/bootstrap.min.js' %}"></script>
-
-</body>
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 text-center">
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- jQuery -->
+      <script src="{% static 'MesAlgo/js/jquery.js' %}"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="{% static 'MesAlgo/js/bootstrap.min.js' %}"></script>
+   </body>
 </html>
+

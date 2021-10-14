@@ -1,10 +1,8 @@
 {% extends 'MesAlgo/base.html' %} {% block content %}
 <div class="col-md-7">
-<img src='../../static/MesAlgo/img/preproc.png' alt="exemple de texte alternatif"/>
-{% for i in visus %}
-  {{i|safe}}
-{%endfor%}
+   <img src='../../static/MesAlgo/img/preproc.png' alt="exemple de texte alternatif"/>
+   {% for i in visus %}
+   {{i|safe}}
+   {%endfor%}
 </div>
-
-
 {% endblock %}

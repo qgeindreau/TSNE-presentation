@@ -131,6 +131,8 @@ def lien(request):
             perp=float(request.POST['perp'])
             lrate=int(request.POST['l_rate'])
             nbiter=int(request.POST['nbiter'])
+            if lrate==0:
+                lrate='auto'
             df_name=request.POST['csv']
             df=pd.read_csv('csv/'+df_name+'.csv',header=None)
             df.columns=list(df.columns)[:-1]+['classe']    
